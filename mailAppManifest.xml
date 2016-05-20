@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Created:cbbc9d22-5cf7-4e4c-8ee9-42a772aae58a-->
+<OfficeApp xsi:type="MailApp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/office/appforoffice/1.0">
+  <Id>37559c9a-1e1a-4001-bdf0-1aae4f02f5d6</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>[Provider name]</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="RegEx examples" />
+  <Description DefaultValue="My description" />
+  <Capabilities>
+    <Capability Name="Mailbox" />
+  </Capabilities>
+  <DesktopSettings>
+    <!--To publish to the Add-in Store, enter the URL that this app will be hosted-->
+    <SourceLocation DefaultValue="AppRead/Home/Home.html" />
+    <RequestedHeight>250</RequestedHeight>
+  </DesktopSettings>
+  <TabletSettings>
+    <!--To publish to the Add-in Store, enter the URL that this app will be hosted-->
+    <SourceLocation DefaultValue="AppRead/Home/Home.html" />
+    <RequestedHeight>250</RequestedHeight>
+  </TabletSettings>
+  <PhoneSettings>
+    <!--To publish to the Add-in Store, enter the URL that this app will be hosted-->
+    <SourceLocation DefaultValue="AppRead/Home/Home.html" />
+  </PhoneSettings>
+  <Permissions>ReadItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="And"><!-- To add more complex rules, add additional rule elements --><Rule xsi:type="ItemIs" ItemType="Message" /><Rule xsi:type="ItemHasRegularExpressionMatch" PropertyName="BodyAsPlaintext" RegExName="WorkflowId" RegExValue="Workflow\sId:\s[0-9|a-z|A-Z]{6}" IgnoreCase="false" /><!-- E.g. To activate when a message contains an address --><!-- <Rule xsi:type="ItemHasKnownEntity" EntityType="Address" /> --></Rule>
+</OfficeApp>
